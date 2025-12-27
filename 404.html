@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+      // Single Page Apps for GitHub Pages
+      const segmentCount = 1; // Adjust if your base path is different
+      const l = window.location;
+      const base = '/react/'; // Match your repository name
+      
+      if (l.pathname.indexOf(base + 'index.html') === -1) {
+        l.replace(
+          l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+          base + 'index.html?p=/' + 
+          l.pathname.replace(new RegExp('^' + base), '').replace(/^\//, '') +
+          (l.search ? '&' + l.search.slice(1) : '') +
+          l.hash
+        );
+      }
+    </script>
+  </head>
+  <body>
+    Redirecting to the Single Page App version...
+  </body>
+</html>
